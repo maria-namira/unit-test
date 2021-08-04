@@ -33,15 +33,3 @@ test('Parameter is not a number!', () => {
   }).toThrow();
 });
 
-/* test('should killed', () => {
-  const received = showHealth({ name: 'Маг', health: 'mistake' });
-  expect(received).toBe('killed');
-});
-test('should killed', () => {
-  const received = showHealth({});
-  expect(received).toBe('killed');
-});
-test('should killed', () => {
-  const received = showHealth({ name: 'Маг', health: -10 });
-  expect(received).toBe('killed');
-}); */
