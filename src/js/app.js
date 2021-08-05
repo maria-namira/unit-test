@@ -1,16 +1,18 @@
-import showHealth from './health';
+import sortPlayerList from '../js/app';
 
-console.log('worked');
+test('Checking the correctness of sorting', () => {
+  const data = [
+    { name: 'мечник', health: 10 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+  ];
 
-showHealth(70);
+  const expected = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+  ];
 
-
-
-
-
-// TODO: write your code here
-///import sum from './basic';
-
-//console.log('worked');
-
-//console.log(sum([1, 2]));
+  expect(sortPlayerList(data)).toEqual(expected);
+  expect(sortPlayerList(data)).not.toBe(expected);
+});
